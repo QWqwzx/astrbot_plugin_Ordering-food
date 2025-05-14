@@ -1,9 +1,45 @@
-# helloworld
+# AstrBot 订餐管理插件
 
-AstrBot 插件模板
+一个简单实用的社群订餐管理插件，帮助机器人自动记录群聊中的订餐信息，并提供编号和汇总功能。
 
-A template plugin for AstrBot plugin feature
+## 功能特点
 
-# 支持
+- 自动接收群成员的订餐信息并编号
+- 支持订单记录持久化存储
+- 提供初始化功能，一键清空订单记录
+- 提供汇总功能，整理所有订单信息
+- 引用回复确认订单，降低沟通成本
 
-[帮助文档](https://astrbot.app)
+## 使用方法
+
+### 安装插件
+
+1. 将插件放入 AstrBot 的 plugins 目录
+```bash
+cp -r astrbot_plugin_ordering_food /path/to/AstrBot/data/plugins/
+```
+
+2. 在 AstrBot WebUI 中启用插件
+
+### 指令说明
+
+- **下单**：`@机器人 [订单内容]`
+  示例：`@机器人 番茄 五谷 炸鸡烤鸭 多腐皮和豆芽少粉 不要辣 微信`
+
+- **初始化**：`@机器人 初始化`
+  清空所有订单记录并重置编号
+
+- **汇总**：`@机器人 汇总`
+  显示所有已记录的订单信息
+
+## 数据存储
+
+订单数据以JSON格式保存在插件数据目录下的 `orders.json` 文件中，即使机器人重启也能保持数据不丢失。
+
+## 许可证
+
+MIT License
+
+## 贡献
+
+欢迎提交 Issue 或 Pull Request 来帮助改进这个插件。
